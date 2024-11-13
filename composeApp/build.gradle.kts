@@ -50,6 +50,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.kotlinx.coroutines.core)
 
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.ktor.client.core)
@@ -57,6 +58,8 @@ kotlin {
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.client.encoding)
+
+            implementation(libs.kermit)
         }
     }
 }
