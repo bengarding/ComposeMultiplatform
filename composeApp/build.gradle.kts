@@ -60,6 +60,9 @@ kotlin {
             implementation(libs.ktor.client.encoding)
 
             implementation(libs.kermit)
+
+            implementation(libs.coil.compose)
+            implementation(libs.coil.network.ktor)
         }
     }
 }

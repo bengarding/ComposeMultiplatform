@@ -1,5 +1,6 @@
 package org.example.project
 
+import WeatherData
 import co.touchlab.kermit.Logger
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
@@ -9,7 +10,7 @@ import kotlinx.serialization.json.Json
 
 expect val client: HttpClient
 
-suspend fun fetchWeatherData(location: String): WeatherInfo? {
+suspend fun fetchWeatherData(location: String): WeatherData? {
     return try {
         // Fetch the response as HttpResponse and read its content
         val response: HttpResponse = client.get("https://api.weatherapi.com/v1/current" +
@@ -19,7 +20,7 @@ suspend fun fetchWeatherData(location: String): WeatherInfo? {
 
         // Check if response is not empty and parse it
         if (responseBody.isNotEmpty()) {
-            Json.decodeFromString<WeatherInfo>(responseBody)
+            Json.decodeFromString<WeatherData>(responseBody)
         } else {
             Logger.d { "Empty response from API" }
             null

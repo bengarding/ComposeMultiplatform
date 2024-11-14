@@ -11,6 +11,8 @@ androidx-espresso-core = "3.6.1"
 androidx-lifecycle = "2.8.3"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
+coil = "3.0.1"
+coil-network = "3.0.0-alpha08"
 compose-multiplatform = "1.7.0"
 junit = "4.13.2"
 kermit = "2.0.4"
@@ -20,6 +22,8 @@ kotlinxSerializationJson = "1.5.1"
 ktor-client = "2.3.6"
 
 [libraries]
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil-network" }
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
